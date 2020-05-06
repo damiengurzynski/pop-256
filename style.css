@@ -3,3 +3,16 @@ html
     text-align: center;
     background-color: cornflowerblue;
 }
+
+.help
+{
+    display: flex;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 10px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    text-align: left;
+}

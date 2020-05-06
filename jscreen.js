@@ -38,18 +38,9 @@ class Jscreen
             var pos = x + (y * this.rows);
             x *= this.csize;
             y *= this.csize;
-            if (!this.dram[pos])
-            {
-                this.ctx.fillStyle = "white";
-                this.ctx.fillRect(x,y,this.csize,this.csize);
-                this.dram[pos] = 1;
-            }
-            else
-            {
-                this.ctx.fillStyle = "black";
-                this.ctx.fillRect(x,y,this.csize,this.csize);
-                this.dram[pos] = 0;
-            }
+            this.ctx.fillStyle = "white";
+            this.ctx.fillRect(x,y,this.csize,this.csize);
+            this.dram[pos] = 1;
         }
     }
 

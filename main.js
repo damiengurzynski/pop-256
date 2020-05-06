@@ -48,6 +48,9 @@ function exec(a, b)
 
     if (a == "dis")
         screen.draw(dstack[dstack.length-2], dstack[dstack.length-1]);
+    
+    if (a == "snd")
+        sound.play(dstack[dstack.length-1]);
 
     if (a == "clr")
         screen.clear();
@@ -91,28 +94,22 @@ document.addEventListener("keydown", function(e)
         screen.chary = 20;
         if (screen.mode == "text")
         {
-            sound.play(30);
-            setTimeout(e => {sound.play(34)}, 80);
-            setTimeout(e => {sound.play(37)}, 160);
             screen.mode = "graph";
-            screen.write("_")
         }
         else
         {
-            sound.play(37);
-            setTimeout(e => {sound.play(34)}, 80);
-            setTimeout(e => {sound.play(30)}, 160);
             screen.mode = "text";
+            screen.write("");
         }
+
         while (pc < program.length)
         {
-            exec(program[pc][0], program[pc][1]);
-            pc++;
+                exec(program[pc][0], program[pc][1]);
+                pc++;
         }
         pc = 0;
         program = [];
-        screen.chars = [];
-        
+        screen.chars = [];   
     }
 
     if (maxchar < 7 && (e.keyCode == 32 || e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode >= 65 && e.keyCode <= 90))

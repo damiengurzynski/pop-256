@@ -7,6 +7,29 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="help">
+        - INSTRUCTIONS MANUAL -<br><br>
+        A program line looks like : <br><br>
+        COMMAND + SPACE + VALUE <br>
+        ex: PUT 10 <br>
+        (value is not needed in some cases)<br><br>
+        Press /ENTER/ to validate the line. <br>
+        Press /LCTRL/ to execute. <br>
+        Press /LCTRL/ again to go back to text mode. <br><br>
+        Instruction set : <br><br>
+        PUT value (push value to stack) <br>
+        POP (pop last value and push it on return stack) <br>
+        PUL (pop last return value and push it on stack) <br>
+        ADD (replace first two values with sum) <br>
+        SUB (replace first two values with difference) <br>
+        MUL (replace first two values with product) <br>
+        DIV (replace first two values with quotient) <br>
+        JNR value (jump to line if not = to return) <br>
+        DUP (duplicate top stack) <br>
+        DIS (draw to screen, top = x, second = y) <br>
+        SND (play sound, top = note, max 83) <br>
+        CLR (clear screen) <br>
+    </div>
     <script src="jscreen.js"></script>
     <script src="jsound.js"></script>
     <script src="main.js"></script>
